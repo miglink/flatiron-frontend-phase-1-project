@@ -9,12 +9,12 @@ characterSelect.addEventListener("change", getCharacter)
 
 //disney collection functions
 
-function getCharacter(e) (
+function getCharacter(e) {
     const character = e.target.value
 
     fetch(`https://api.disneyapi.dev/character=${character}`)
         .then(r => r.json())
-        .then(recipes => renderAllCharacters(characters)
-
-)
+        .then(recipes => renderAllCharacters(characters))
+        .catch(error => alert(error))
+}
 
