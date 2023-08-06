@@ -5,6 +5,8 @@ const characterSelect = document.querySelector("#characters")
 getCharacter()
 
 // EventListeners
+characterSelect.addEventListener("change", getCharacter)
+
 //disney collection functions
 
 function getCharacter(e) (
